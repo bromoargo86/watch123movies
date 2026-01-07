@@ -34,25 +34,6 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="mb-12 text-center max-w-2xl mx-auto">
-          <h3 className="text-white text-2xl font-bold mb-6 flex items-center justify-center gap-3">
-            <FaStar className="text-yellow-400" />
-            Stay Updated with Latest Releases
-            <FaStar className="text-yellow-400" />
-          </h3>
-          <div className="max-w-md mx-auto flex shadow-2xl rounded-2xl overflow-hidden">
-            <input 
-              type="email" 
-              placeholder="Enter your email address" 
-              className="bg-gray-800 text-white text-lg px-6 py-4 w-full focus:outline-none focus:ring-4 focus:ring-blue-500/50 border border-gray-700"
-            />
-            <button className="bg-gradient-to-r from-blue-600 to-purple-700 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 transition-all duration-500 text-lg font-bold hover:scale-105 transform-gpu">
-              Subscribe
-            </button>
-          </div>
-          <p className="text-gray-500 mt-4 text-sm">Get notified about new movie releases and exclusive content</p>
-        </div>
-        
         <div className="border-t border-gray-800 pt-12 flex flex-col lg:flex-row justify-between items-center gap-8">
           <div className="text-center lg:text-left">
             <p className="text-lg">&copy; {year} 123Movies. All rights reserved.</p>

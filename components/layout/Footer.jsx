@@ -13,7 +13,7 @@ export default function Footer() {
               <FaVideo className="text-blue-500 text-4xl mr-4 group-hover:text-yellow-400 transition-colors duration-500 group-hover:scale-110 transform-gpu" />
               <div className="absolute inset-0 bg-yellow-400 rounded-full blur-md group-hover:blur-lg opacity-50 group-hover:opacity-70 transition-all duration-500"></div>
             </div>
-            <a href="https://123movies-lab.vercel.app" className="text-3xl font-black text-white hover:text-transparent bg-gradient-to-r from-blue-400 to-purple-400 hover:from-orange-400 hover:to-yellow-400 bg-clip-text transition-all duration-500">
+            <a href="https://watch123movies.netlify.app" className="text-3xl font-black text-white hover:text-transparent bg-gradient-to-r from-blue-400 to-purple-400 hover:from-orange-400 hover:to-yellow-400 bg-clip-text transition-all duration-500">
               123Movies
             </a>
           </div>

@@ -12,7 +12,7 @@ export const metadata = {
   openGraph: {
     title: '123Movies | Complete Movie & TV Series Database',
     description: 'Your ultimate destination for movies, TV series, actor profiles, and streaming information. Explore genres, yearly archives, and top rankings.',
-    url: 'https://123movies-lab.vercel.app',
+    url: 'https://watch123movies.netlify.app',
     siteName: '123Movies',
     images: [
       {
@@ -47,7 +47,7 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <meta name="google-site-verification" content="eTxFXDMvx8hMq6FhZjy7dM4MJScVKVtkRyNOZ__jplA" />
+        <meta name="google-site-verification" content="lyD9VAJIlslI0l0NnqouGmNWADSy3WxO-6rUUPyoNCg" />
       </head>
       <body>
         <AdsterraLayoutWrapper countryCode={countryCode}>
@@ -60,7 +60,7 @@ export default async function RootLayout({ children }) {
               <div className="max-w-7xl mx-auto px-4 flex justify-center">
                 <AdBanner 
                   adId="728x90_header"
-                  scriptKey="c5e76c7d15bc2605c884f3e4723398a6"
+                  scriptKey="133d755af264470ddee006169312014f"
                   height={90} 
                   width={728}
                   className="rounded-lg overflow-hidden shadow-lg"
@@ -73,7 +73,7 @@ export default async function RootLayout({ children }) {
             </main>
             
             <footer className="w-full max-w-7xl mx-auto px-4 py-8">
-              <div id="container-94239f574c56d0c3eb0e8dcb1de02d4f"></div>
+              <div id="container-9286d7d498010b34778042caf6720f37"></div>
               <Footer />
             </footer>
           </div>

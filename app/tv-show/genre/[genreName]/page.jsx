@@ -40,7 +40,7 @@ export async function generateMetadata({ params }) {
 
   const title = genre?.name || 'Unknown';
   
-  const pageUrl = `https://123movies-lab.vercel.app/tv-show/genre/${genreName}`;
+  const pageUrl = `https://watch123movies.netlify.app/tv-show/genre/${genreName}`;
   const imageUrl = 'https://live.staticflickr.com/65535/54812286746_f853554453_b.jpg';
 
   return {

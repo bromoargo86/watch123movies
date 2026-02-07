@@ -1,5 +1,5 @@
 // app/sitemap.js - VERSI DIPERBAIKI DAN LENGKAP
-const BASE_URL = 'https://123movies-lab.vercel.app';
+const BASE_URL = 'https://watch123movies.netlify.app';
 
 export default async function sitemap() {
   console.log('🎬 Generating dynamic sitemap for 123Movies...');

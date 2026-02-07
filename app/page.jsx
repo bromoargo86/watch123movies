@@ -26,7 +26,7 @@ export default function About() {
       <div className="bg-gradient-to-b from-purple-900/50 to-slate-900 py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-3xl md:text-4xl font-extrabold mb-3 text-orange-400">
-            Cinevisio Your Ultimate Movie & TV Database
+            123Movies Your Ultimate Movie & TV Database
             <span className="block text-xl md:text-4xl font-extrabold mt-2 text-orange-400">
               Watch Stream and Discover Cinema
             </span>
@@ -72,10 +72,10 @@ export default function About() {
               </h2>
               <div className="text-lg text-gray-400 max-w-4xl mx-auto space-y-4 text-center">
                 <p>
-                  <strong>Cinevisio</strong> is America's premier movie database and streaming guide platform. Whether you want to <strong>watch movies online</strong>, <strong>stream TV series</strong>, or find <strong>free movie streaming</strong> options, we provide comprehensive information across all major platforms including <strong>Netflix</strong>, <strong>Disney+</strong>, <strong>Prime Video</strong>, HBO Max, Hulu, and more. Our database helps you discover where to watch content in <strong>HD quality</strong>, track <strong>box office</strong> performance, and explore detailed information about your favorite films and shows.
+                  <strong>123Movies</strong> is America's premier movie database and streaming guide platform. Whether you want to <strong>watch movies online</strong>, <strong>stream TV series</strong>, or find <strong>free movie streaming</strong> options, we provide comprehensive information across all major platforms including <strong>Netflix</strong>, <strong>Disney+</strong>, <strong>Prime Video</strong>, HBO Max, Hulu, and more. Our database helps you discover where to watch content in <strong>HD quality</strong>, track <strong>box office</strong> performance, and explore detailed information about your favorite films and shows.
                 </p>
                 <p>
-                  We specialize in helping users find exactly what to watch across all genres. Love <strong>action</strong> movies? We've got the latest blockbusters. Prefer <strong>adventure</strong> or <strong>sci-fi</strong>? Explore our curated collections. Looking for <strong>anime</strong> series, <strong>crime mystery</strong> thrillers, intense <strong>drama</strong>, chilling <strong>horror</strong>, heartwarming <strong>comedy</strong>, suspenseful <strong>thriller</strong>, intriguing <strong>mystery</strong>, historical <strong>war</strong> films, or magical <strong>fantasy</strong>? Cinevisio has you covered with detailed genre pages and personalized recommendations.
+                  We specialize in helping users find exactly what to watch across all genres. Love <strong>action</strong> movies? We've got the latest blockbusters. Prefer <strong>adventure</strong> or <strong>sci-fi</strong>? Explore our curated collections. Looking for <strong>anime</strong> series, <strong>crime mystery</strong> thrillers, intense <strong>drama</strong>, chilling <strong>horror</strong>, heartwarming <strong>comedy</strong>, suspenseful <strong>thriller</strong>, intriguing <strong>mystery</strong>, historical <strong>war</strong> films, or magical <strong>fantasy</strong>? 123Movies has you covered with detailed genre pages and personalized recommendations.
                 </p>
               </div>
             </div>
@@ -84,17 +84,17 @@ export default function About() {
           {/* SEO-Optimized About Section */}
           <section className="mb-16 bg-gray-900/50 p-8 rounded-xl">
             <h2 className="text-3xl font-bold mb-8 text-center text-orange-300">
-              About Cinevisio: Your Ultimate Streaming Companion
+              About 123Movies: Your Ultimate Streaming Companion
               <span className="block text-xl md:text-3xl font-bold mt-2 text-orange-300">
                 Watch • Stream • Discover • Enjoy
               </span>
             </h2>
             
             <div className="space-y-6 text-gray-400 text-justify">
-              <h3 className="text-2xl font-semibold text-blue-300 mb-4">What is Cinevisio?</h3>
+              <h3 className="text-2xl font-semibold text-blue-300 mb-4">What is 123Movies?</h3>
               
               <p>
-                Cinevisio is a comprehensive movie and TV series database designed to help users <strong>watch movies online</strong>, <strong>stream TV shows</strong>, and discover new content across all streaming platforms. We answer the most common search queries like "where to watch [movie title]", "movies like [favorite film]", "best shows on Netflix", and "free movie streaming sites". Our platform covers everything from Hollywood blockbusters to international cinema, with a focus on delivering accurate streaming availability information in real-time.
+                123Movies is a comprehensive movie and TV series database designed to help users <strong>watch movies online</strong>, <strong>stream TV shows</strong>, and discover new content across all streaming platforms. We answer the most common search queries like "where to watch [movie title]", "movies like [favorite film]", "best shows on Netflix", and "free movie streaming sites". Our platform covers everything from Hollywood blockbusters to international cinema, with a focus on delivering accurate streaming availability information in real-time.
               </p>
 
               <h3 className="text-2xl font-semibold text-blue-300 mb-4">Streaming Guide & Platform Coverage</h3>
@@ -106,7 +106,7 @@ export default function About() {
               <h3 className="text-2xl font-semibold text-blue-300 mb-4">Genre-Specific Content Discovery</h3>
               
               <p>
-                Cinevisio excels at helping users explore content by genre. Our specialized sections include:
+                123Movies excels at helping users explore content by genre. Our specialized sections include:
               </p>
               <ul className="ml-6 space-y-2">
                 <li>• <strong>Action & Adventure</strong>: Latest blockbusters, stunt-filled sequences, and epic journeys</li>
@@ -127,7 +127,7 @@ export default function About() {
               <h3 className="text-2xl font-semibold text-blue-300 mb-4">Free & Premium Streaming Options</h3>
               
               <p>
-                We help users find both <strong>free movie streaming</strong> options (ad-supported platforms) and premium subscription content. Our database includes information about free trials, bundle deals, and cost-effective ways to access multiple streaming services. Whether you want to watch free content or maximize your premium subscriptions, Cinevisio provides the information you need to make smart viewing choices.
+                We help users find both <strong>free movie streaming</strong> options (ad-supported platforms) and premium subscription content. Our database includes information about free trials, bundle deals, and cost-effective ways to access multiple streaming services. Whether you want to watch free content or maximize your premium subscriptions, 123Movies provides the information you need to make smart viewing choices.
               </p>
 
               <h3 className="text-2xl font-semibold text-blue-300 mb-4">Quality & Experience Features</h3>
@@ -136,10 +136,10 @@ export default function About() {
                 We prioritize content quality information, highlighting availability in <strong>HD quality</strong>, 4K, HDR, and Dolby Atmos. Our platform also includes parental guides, content ratings, and detailed episode information for TV series. We help users create watchlists, receive notifications when content becomes available on their preferred platforms, and share recommendations with friends.
               </p>
 
-              <h3 className="text-2xl font-semibold text-blue-300 mb-4">Why Choose Cinevisio?</h3>
+              <h3 className="text-2xl font-semibold text-blue-300 mb-4">Why Choose 123Movies?</h3>
               
               <p>
-                Cinevisio stands out as the most user-friendly and comprehensive movie database because:
+                123Movies stands out as the most user-friendly and comprehensive movie database because:
               </p>
               <ul className="ml-6 space-y-2">
                 <li>• <strong>Real-time streaming availability</strong> across all major platforms</li>
@@ -154,7 +154,7 @@ export default function About() {
               <h3 className="text-2xl font-semibold text-blue-300 mb-4">Start Your Streaming Journey Today</h3>
               
               <p>
-                Join millions of users who trust Cinevisio to help them decide what to watch next. Whether you're searching for "watch movie online free", "stream movies HD", "best Netflix series", "Disney+ new releases", "Prime Video movies", or specific genre content like "action movies 2024" or "horror series to watch", Cinevisio delivers accurate, up-to-date information to enhance your viewing experience. Our platform continuously updates with new releases, streaming changes, and trending content to ensure you never miss out on great entertainment.
+                Join millions of users who trust 123Movies to help them decide what to watch next. Whether you're searching for "watch movie online free", "stream movies HD", "best Netflix series", "Disney+ new releases", "Prime Video movies", or specific genre content like "action movies 2024" or "horror series to watch", 123Movies delivers accurate, up-to-date information to enhance your viewing experience. Our platform continuously updates with new releases, streaming changes, and trending content to ensure you never miss out on great entertainment.
               </p>
             </div>
           </section>
@@ -257,7 +257,7 @@ export default function About() {
               </span>
             </h2>
             <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
-              Join millions who use Cinevisio to watch movies, stream series, and discover new favorites across Netflix, Disney+, Prime Video, and more. Get HD quality recommendations, box office updates, and personalized suggestions.
+              Join millions who use 123Movies to watch movies, stream series, and discover new favorites across Netflix, Disney+, Prime Video, and more. Get HD quality recommendations, box office updates, and personalized suggestions.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="/movie/popular" className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors flex items-center gap-2">
@@ -268,7 +268,7 @@ export default function About() {
               </Link>
             </div>
             <p className="mt-8 text-gray-400 max-w-3xl mx-auto">
-              <strong>Cinevisio</strong> - Your ultimate guide to watch movies online, stream TV shows, find free streaming options, track box office results, and explore content across Netflix, Disney+, Prime Video and more in HD quality. Discover action, adventure, sci-fi, anime, crime, drama, horror, comedy, thriller, mystery, war, fantasy, and all your favorite genres.
+              <strong>123Movies</strong> - Your ultimate guide to watch movies online, stream TV shows, find free streaming options, track box office results, and explore content across Netflix, Disney+, Prime Video and more in HD quality. Discover action, adventure, sci-fi, anime, crime, drama, horror, comedy, thriller, mystery, war, fantasy, and all your favorite genres.
             </p>
           </section>
         </div>

@@ -3,7 +3,7 @@
 "use client";
 
 import Link from 'next/link';
-import { FaVideo, FaChevronDown, FaBars, FaTimes, FaExclamationTriangle } from 'react-icons/fa';
+import { FaVideo, FaChevronDown, FaBars, FaTimes, FaUser, FaCalendar, FaTrophy } from 'react-icons/fa';
 import { getMovieGenres, getTvSeriesGenres } from '../../lib/api';
 import SearchBar from '../SearchBar';
 import { useEffect, useState } from 'react';
@@ -108,8 +108,6 @@ export default function Navbar() {
   const [movieGenres, setMovieGenres] = useState([]);
   const [tvGenres, setTvGenres] = useState([]);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [showAdultWarning, setShowAdultWarning] = useState(false);
-  const [adultContentType, setAdultContentType] = useState('');
 
   useEffect(() => {
     const fetchGenres = async () => {
@@ -127,22 +125,13 @@ export default function Navbar() {
     fetchGenres();
   }, []);
 
-  const handleAdultContentClick = (type) => {
-    setAdultContentType(type);
-    setShowAdultWarning(true);
-  };
-
-  const confirmAdultContent = () => {
-    if (adultContentType === 'erotic') {
-      window.location.href = '/adult/erotic-movies';
-    } else if (adultContentType === 'adult-list') {
-      window.location.href = '/adult/adult-movies';
-    }
-    setShowAdultWarning(false);
-  };
+  // Generate current year and decade for archives
+  const currentYear = new Date().getFullYear();
+  const recentYears = Array.from({ length: 5 }, (_, i) => currentYear - i);
+  const decades = ['2020s', '2010s', '2000s', '1990s', '1980s'];
 
   return (
-    <nav className="bg-gradient-to-r from-slate-800/80 to-purple-900/80 backdrop-blur-lg rounded-2xl p-4 mb-4">
+    <nav className="bg-gradient-to-b from-purple-900/50 to-slate-900 py-6 p-4 sticky top-0 z-50 shadow-lg transition-colors duration-300">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center space-x-4">
           {/* Logo mengarah ke Trendingpage (/) - halaman about */}
@@ -153,10 +142,8 @@ export default function Navbar() {
             </span>
           </Link>
           <div className="hidden md:flex items-center space-x-4">
-            {/* Trending mengarah ke /Trending (halaman trending) */}
-            <Link href="/Trending" className="text-white font-bold hover:text-green-600 transition-colors">
-              Trending
-            </Link>
+            
+            {/* Movies Dropdown */}
             <DropdownMenu
               title="Movies"
               categories={[
@@ -168,6 +155,8 @@ export default function Navbar() {
               genres={movieGenres}
               genrePathPrefix="movie"
             />
+            
+            {/* TV Series Dropdown */}
             <DropdownMenu
               title="Tv Series"
               categories={[
@@ -180,25 +169,50 @@ export default function Navbar() {
               genrePathPrefix="tv-show"
             />
             
-            {/* Tombol Erotic */}
-            <button
-              onClick={() => handleAdultContentClick('erotic')}
-              className="text-white font-bold hover:text-blue-600 transition-colors py-2"
-            >
-              Erotic
-            </button>
+            {/* Actors/People */}
+            <Link href="/people" className="flex items-center text-white hover:text-green-600 transition-colors duration-200 font-bold">
+              <FaUser className="mr-1" /> Actors
+            </Link>
             
-            {/* Tombol Adult */}
-            <button
-              onClick={() => handleAdultContentClick('adult-list')}
-              className="text-white font-bold hover:text-red-600 transition-colors py-2"
-            >
-              Adult
-            </button>
+            {/* Rankings/Top Rated */}
+            <Link href="/rankings" className="flex items-center text-white hover:text-green-600 transition-colors duration-200 font-bold">
+              <FaTrophy className="mr-1" /> Rankings
+            </Link>
+            
+            {/* Archives by Year */}
+            <div className="relative group">
+              <button className="flex items-center text-white hover:text-green-600 transition-colors duration-200 font-bold">
+                <FaCalendar className="mr-1" /> Archives <FaChevronDown className="ml-1" />
+              </button>
+              <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg z-20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                <div className="py-2">
+                  <div className="px-4 py-1 text-xs text-gray-400 border-b border-gray-700">By Year</div>
+                  {recentYears.map(year => (
+                    <Link
+                      key={year}
+                      href={`/movie/year/${year}`}
+                      className={dropdownItemClass}
+                    >
+                      {year}
+                    </Link>
+                  ))}
+                  <div className="px-4 py-1 text-xs text-gray-400 border-b border-gray-700 mt-2">By Decade</div>
+                  {decades.map(decade => (
+                    <Link
+                      key={decade}
+                      href={`/movie/decade/${decade.toLowerCase()}`}
+                      className={dropdownItemClass}
+                    >
+                      {decade}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-1">
           {/* Search Bar */}
           <div className="w-72 md:w-80 lg:w-96 hidden md:block">
             <SearchBar />
@@ -222,37 +236,52 @@ export default function Navbar() {
             <SearchBar />
           </div>
           <div className="flex flex-col space-y-3">
-            {/* Trending mobile - mengarah ke /Trending */}
             <Link 
-              href="/Trending" 
+              href="/people" 
               className="text-white font-bold hover:text-green-600 transition-colors py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Trending
+              Actors & People
             </Link>
             
-            {/* Tombol Erotic untuk mobile */}
-            <button
-              onClick={() => {
-                setIsMobileMenuOpen(false);
-                handleAdultContentClick('erotic');
-              }}
+            <Link 
+              href="/rankings" 
               className="text-white font-bold hover:text-green-600 transition-colors py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
             >
-              Erotic Content
-            </button>
+              Top Rankings
+            </Link>
             
-            {/* Tombol Adult untuk mobile */}
-            <button
-              onClick={() => {
-                setIsMobileMenuOpen(false);
-                handleAdultContentClick('adult-list');
-              }}
-              className="text-white font-bold hover:text-green-600 transition-colors py-2"
-            >
-              Adult Movies
-            </button>
+            {/* Archives Mobile */}
+            <div className="border-t border-gray-700 pt-3">
+              <h3 className="text-white font-bold mb-2">Archives</h3>
+              <div className="grid grid-cols-3 gap-2 pl-2">
+                {recentYears.map(year => (
+                  <Link
+                    key={year}
+                    href={`/movie/year/${year}`}
+                    className="text-xs text-gray-300 hover:text-white transition-colors text-center py-1"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {year}
+                  </Link>
+                ))}
+              </div>
+              <div className="grid grid-cols-2 gap-2 pl-2 mt-2">
+                {decades.map(decade => (
+                  <Link
+                    key={decade}
+                    href={`/movie/decade/${decade.toLowerCase()}`}
+                    className="text-xs text-gray-300 hover:text-white transition-colors text-center py-1"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {decade}
+                  </Link>
+                ))}
+              </div>
+            </div>
             
+            {/* Movies Mobile */}
             <div className="border-t border-gray-700 pt-3">
               <h3 className="text-white font-bold mb-2">Movies</h3>
               <div className="flex flex-col space-y-2 pl-4">
@@ -303,6 +332,7 @@ export default function Navbar() {
               </div>
             </div>
             
+            {/* TV Series Mobile */}
             <div className="border-t border-gray-700 pt-3">
               <h3 className="text-white font-bold mb-2">TV Series</h3>
               <div className="flex flex-col space-y-2 pl-4">
@@ -351,36 +381,6 @@ export default function Navbar() {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      )}
-      
-      {/* Modal Peringatan Konten Dewasa */}
-      {showAdultWarning && (
-        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
-          <div className="bg-slate-800 p-6 rounded-lg max-w-md w-full mx-4">
-            <div className="flex items-center mb-4 text-red-500">
-              <FaExclamationTriangle className="text-2xl mr-2" />
-              <h3 className="text-xl font-bold">Adult Content Warning</h3>
-            </div>
-            <p className="text-gray-300 mb-6">
-              This content is intended for viewers aged 18 and over only.
-              Are you sure you want to continue?
-            </p>
-            <div className="flex justify-end space-x-4">
-              <button
-                onClick={() => setShowAdultWarning(false)}
-                className="px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 transition-colors"
-              >
-                Cancel
-              </button>
-              <button
-                onClick={confirmAdultContent}
-                className="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors"
-              >
-                Continue
-              </button>
             </div>
           </div>
         </div>

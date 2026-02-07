@@ -84,7 +84,7 @@ export async function generateMetadata({ params }) {
   if (!movieData) {
     return {
       title: '123Movies',
-      description: 'Find your favorite movies to stream.',
+      description: 'Watch Movie Stream Movies and Tv Series Free.',
     };
   }
 
@@ -104,7 +104,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: movieData.title,
       description: movieData.overview || `Detailed information for movie ${movieData.title}`,
-      url: `https://123movies123.vercel.app/movie/${slug}`,
+      url: `https://123movies-lab.vercel.app/movie/${slug}`,
       siteName: '123Movies',
       images: [
         {
@@ -419,7 +419,7 @@ export default async function MoviePage({ params }) {
 		{/* Bottom Stream Button */}
         <div className="mt-12 text-center">
              <a href={`/movie/${slug}/stream`}>
-              <button className="bg-blue-700 hover:bg-red-700 text-white font-bold py-4 px-10 rounded-lg text-xl transition-transform transform hover:scale-105 shadow-lg">
+              <button className="bg-blue-700 hover:bg-green-800 text-white font-bold py-4 px-10 rounded-lg text-xl transition-transform transform hover:scale-105 shadow-lg">
                 🎬 Stream Now
               </button>
             </a>

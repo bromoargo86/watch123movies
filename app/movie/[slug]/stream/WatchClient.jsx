@@ -84,7 +84,7 @@ export default function WatchClient({ mediaType, id, initialDetails, initialSimi
     // Function to fetch data from the TMDb keyword API
     const getEroticMovies = async (page = 1) => {
         const API_KEY = process.env.NEXT_PUBLIC_TMDB_API_KEY; 
-        const keywordId = 256466;
+        const keywordId = 267122;
         const url = `https://api.themoviedb.org/3/keyword/${keywordId}/movies?api_key=${API_KEY}&page=${page}`;
         
         try {
@@ -216,7 +216,7 @@ export default function WatchClient({ mediaType, id, initialDetails, initialSimi
                             <button
                                 onClick={loadMoreMovies}
                                 disabled={isLoading}
-                                className="bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold shadow-lg hover:bg-red-700 transition-colors disabled:bg-gray-700 disabled:cursor-not-allowed"
+                                className="bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold shadow-lg hover:bg-green-800 transition-colors disabled:bg-gray-700 disabled:cursor-not-allowed"
                             >
                                 {isLoading ? 'Loading...' : 'Load More'}
                             </button>

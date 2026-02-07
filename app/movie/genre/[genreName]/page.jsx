@@ -15,7 +15,7 @@ export async function generateMetadata({ params }) {
   const title = genre?.name || 'Unknown';
 
   const pageUrl = `https://123movies-lab.vercel.app/movie/genre/${genreName}`;
-  const imageUrl = 'https://live.staticflickr.com/65535/54783431146_cea3af132d_b.jpg';
+  const imageUrl = 'https://live.staticflickr.com/65535/54812286746_f853554453_b.jpg';
 
   return {
     title: `123Movies - ${title} Movies`,

@@ -28,7 +28,7 @@ export default function MediaCard({ mediaItem }) {
   const posterPath = mediaItem.poster_path;
   const imageUrl = posterPath
     ? `https://image.tmdb.org/t/p/w500${posterPath}`
-    : 'https://via.placeholder.com/500x750.png?text=No+Image';
+    : 'https://via.placehold.co/500x750.png?text=No+Image';
 
   const isMovie = mediaItem.title !== undefined;
   const title = isMovie ? mediaItem.title : mediaItem.name;

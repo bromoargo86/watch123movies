@@ -103,7 +103,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: tvShowData.name,
       description: tvShowData.overview,
-      url: `https://123movies123.vercel.app/tv-show/${slug}`,
+      url: `https://123movies-lab.vercel.app/tv-show/${slug}`,
       siteName: '123Movies',
       images: [{ url: socialImage, width: 1200, height: 630, alt: socialImageAlt }],
       locale: 'en_US',
